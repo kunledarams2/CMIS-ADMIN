@@ -1,0 +1,68 @@
+.post_date{
+    background: #74a54caf;
+    margin: 4px, 0;
+    padding: 3px;
+    display: block;
+}
+.post_body{
+    background: #ccd3c6af;
+    margin: 5px, 0;
+    display: block;
+    padding: 3px;
+}
+.box_header{
+    width: 100%;
+    margin: auto;
+    padding: 10px 30px;
+    position: relative;
+}
+.box{
+    margin: 5% auto;
+    background: white;
+    /* border: 0 none;*/
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 50px 50px; 
+     box-sizing: border-box;  
+    width: 60%;
+}
+.box_application{
+    /* width: 600px; */
+    margin: 10px auto;
+    background: white;
+    /* border: 0 none;*/
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px; 
+     box-sizing: border-box;  
+    width: 60%;
+    height: auto;
+   
+    /* margin: 5% 10% 10%; */
+
+    position: relative;
+}
+.active_tab1{
+    background-color: #ffffff;
+    color: #333333;
+    font-weight: 600px;
+    padding: 1%;
+   
+}
+.inactive_tab1{
+    background-color: #f5f5f5;
+    color: #333333;
+    font-weight: 600px;
+    cursor: none;
+    padding: 1%;
+}
+.has_error{
+    background-color: #f5f5f5;
+    border-color: #d41616;
+}
+
+/* payment form ..........*/
+.payment_note{
+    padding: 10px 20px;
+    border: #d41616 1px;
+}
