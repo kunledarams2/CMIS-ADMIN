@@ -78,9 +78,10 @@
 				</li>
 				<li><span><a href="#0">Administration</a></span>
 					<ul>
-						<li><a href="">Pricipal</a></li>
-						<li><a href="">Bursary</a></li>
-						<li><a href="">Teacher detail</a></li>
+						<li><a href=<?php echo site_url('/authentication/login')?>>Pricipal</a></li>
+						<li><a href=<?php echo site_url('/authentication/login')?>>Bursary</a></li>
+						<li><a href=<?php echo site_url('/authentication/login')?>>Teacher detail</a></li>
+						<li><a href=<?php echo site_url('/authentication/login')?>>Admission Officer</a></li>
 						<!-- <li><a href="courses-list-sidebar.html">Courses list sidebar</a></li>
 						<li><a href="course-detail.html">Course detail</a></li>
                         <li><a href="course-detail-2.html">Course detail working form</a></li>

@@ -1,11 +1,10 @@
 
-<div class="container box">
+<!-- <div class="container box"> -->
 
-<h4><?=$title?></h4>
 
-<?php echo validation_errors()?>
-<?php echo form_open('admissions/login')?>
-  <div class="form-group">
+
+
+  <!-- <div class="form-group">
     <label >Username</label>
     <input type="text" class="form-control" name="username" placeholder="Username">
   </div>
@@ -16,9 +15,47 @@
   <div  align="center">
   <button type="submit" class="btn btn-primary">Submit</button>
   <br>
-  <p><a href=<?php echo site_url('/admissions/createaccount')?>>New User? Create account</a> </p>
+  <p><a href=>New User? Create account</a> </p>
 
   </div>
   
 </form>
-</div>
+</div> -->
+
+<div id="login">
+<?php echo validation_errors()?>
+<?php echo form_open('admissions/login')?>
+		<aside>
+			<figure>
+				<a href=""><img src="<?php echo base_url();?>>/assets/img/logo.png" width="149" height="42" data-retina="true" alt=""></a>
+			</figure>
+			  <!-- <form > -->
+				<!-- <div class="access_social">
+					<a href="#0" class="social_bt facebook">Login with Facebook</a>
+					<a href="#0" class="social_bt google">Login with Google</a>
+					<a href="#0" class="social_bt linkedin">Login with Linkedin</a>
+				</div> -->
+				<div class="divider"><span><?=$title?></span></div>
+				<div class="form-group">
+					<span class="input">
+					<input class="input_field" type="text" autocomplete="off" name="username">
+						<label class="input_label">
+						<span class="input__label-content">Username</span>
+					</label>
+					</span>
+
+					<span class="input">
+					<input class="input_field" type="password" autocomplete="new-password" name="password">
+						<label class="input_label">
+						<span class="input__label-content">Password</span>
+					</label>
+					</span>
+					<small><a href="#0">Forgot password?</a></small>
+        </div>
+        <button type="submit" class="btn_1 rounded full-width add_top_60">Login</button>
+				<!-- <a href=""class="btn_1 rounded full-width add_top_60">Login</a> -->
+				<div class="text-center add_top_10">New user? <strong><a href=<?php echo site_url('/admissions/createaccount')?>>Sign up!</a></strong></div>
+			<!-- </form> -->
+			<div class="copy">© 2020 CMIS</div>
+		</aside>
+	</div>

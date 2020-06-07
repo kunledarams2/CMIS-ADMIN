@@ -123,6 +123,18 @@ class addmission_model extends CI_Model{
        }
    }
 
+   // check for application payment 
+
+   public function check_payment($application_id){
+    $query = $this->db->get_where('payment', array('application_id'=>$application_id));
+    if(empty($query->row_array())){
+        return true;
+    }
+    else{
+        return false;
+    }
+   }
+
     public function login_info($username, $password){
         
         // Validate
@@ -140,7 +152,7 @@ class addmission_model extends CI_Model{
 
     }
 
-    public function create_student_biodata($reg_id){
+    public function create_student_biodata($reg_id, $application_id){
 
         $data = array(
 
@@ -168,12 +180,25 @@ class addmission_model extends CI_Model{
            'profession'=>$this->input->post('parentprofession'),
            'phonenumber'=>$this->input->post('parentphone'),
            'email'=>$this->input->post('parentemail'),
+           'application_id'=>$application_id,
            
 
         );
 
         return $this->db->insert('admission_biodata',$data); 
 
+    }
+
+    public function save_payment_info($payment_type, $payment_ref, $student_id, $application_id){
+
+        $data = array(
+            'payment_type'=>$payment_type,
+            'payment_ref'=>$payment_ref,
+            'student_id'=>$student_id,
+            'application_id'=>$application_id,
+        );
+
+        return $this->db->insert('payment',$data);
     }
 
     public function get_student_email($reg_id){
@@ -185,5 +210,16 @@ class addmission_model extends CI_Model{
         }else{
             return false;
         }
+    }
+
+    public function get_application_id($reg_id){
+        $this->db->where('application_registration_id', $reg_id);
+        $result = $this->db->get('admission_biodata');
+        if($result->num_rows()==1){
+            return $result ->row(0)->appllication_id;
+        }else{
+            return false;
+        }
+        
     }
 }

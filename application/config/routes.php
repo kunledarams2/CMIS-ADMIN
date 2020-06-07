@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+$route['authentication/login'] = 'authentication/login';
 $route['admissions/studentapplicationform'] = 'admissions/studentapplicationform';
 // $route['admissions/admissionapplicationform'] = 'admissions/admissionapplicationform';
 // $route['admissions/applicationform'] = 'admissions/applicationform';
@@ -15,4 +16,6 @@ $route['default_controller'] = 'pages/view';
 $route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['admin/admin_officer'] = 'admin/admin_officer';
+
  

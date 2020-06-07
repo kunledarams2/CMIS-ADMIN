@@ -17,7 +17,7 @@ form_open('admissions/applicationpaymentform');?>
 
 <div class="container box">
 <h5> <b><?=$title ?></b></h5>
-<div class="payment_note" >
+<div class="wrapper" >
 <p>Thank for making <b>Kingdom Way Academy</b> your first choice. <br>
  For the school addmission board to process your application. You have to make a payment of <b>N4000</b>  </b></b></p>
 </div>
@@ -32,7 +32,8 @@ form_open('admissions/applicationpaymentform');?>
        <form action="#" method="post">
        <input type="hidden" name="amount" value="4000">
          <button type="submit" class="btn btn-info btn-lg" id="btn_application_payment" name="pay"> Make Payment</button>
-         <button type="button" class="btn btn-danger btn-lg" id="btn_cancel_payment"> Cancel</button>
+         <button type="submit" class="btn btn-danger btn-lg" id="btn_cancel_payment" formaction = "<?php echo base_url("admissions/login");?>"> Not Now </button>
+         <!-- <a href="<?php echo base_url("pages/view");?>">Cancel</a> -->
 
        </form>
       

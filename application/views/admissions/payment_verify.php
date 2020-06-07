@@ -3,10 +3,12 @@ form_open('admissions/payment_verify');?>
 
 <div class="container box">
 <h5> <b><?=$title ?></b></h5>
-<div class="payment_note" >
+<div class="wrapper" >
 <p>Payment<b>  Successful</b> <br>
-  Name: Daramola Adekunle</b></b> <br>
- Appication Id : CMIS-2020-01</p>
+  Name: <?=$name?></b></b> <br>
+  Appication Id : <?=$application_id?> <br>
+  Examination Access Code: <?=$exam_access_code?><br></p>
+  <!-- Amount: <?=$amount?></p> -->
 </div>
 
  <div align="center">

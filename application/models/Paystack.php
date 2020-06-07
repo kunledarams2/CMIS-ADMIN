@@ -14,7 +14,7 @@ class Paystack extends CI_Model
     }
 
 
-    private function getPaymentInfo($ref) {
+    function getPaymentInfo($ref) {
         $result = array();
         $url = 'https://api.paystack.co/transaction/verify/'.$ref;
         $ch = curl_init();
@@ -52,40 +52,44 @@ class Paystack extends CI_Model
         $request = curl_exec($ch);
         curl_close($ch);
         //
-        if ($request) {
-            $result = json_decode($request, true);
-            // print_r($result);
-            if($result){
-                if($result['data']){
-                    //something came in
-                    if($result['data']['status'] == 'success'){
 
-                        //echo "Transaction was successful";
-                        header("Location: ".base_url().'paystack/success/'.$ref);
+        $result = json_decode($request, true);
+        return $result['data'];
 
-                    }else{
-                        // the transaction was not successful, do not deliver value'
-                        // print_r($result);  //uncomment this line to inspect the result, to check why it failed.
-                        header("Location: ".base_url().'paystack/fail/'.$ref);
+        // if ($request) {
+           
+        //     // print_r($result);
+        //     if($result){
+        //         if($result['data']){
+        //             //something came in
+        //             if($result['data']['status'] == 'success'){
 
-                    }
-                }
-                else{
+        //                 //echo "Transaction was successful";
+        //                 header("Location: ".base_url().'paystack/success/'.$ref);
 
-                    //echo $result['message'];
-                    header("Location: ".base_url().'paystack/fail/'.$ref);
-                }
+        //             }else{
+        //                 // the transaction was not successful, do not deliver value'
+        //                 // print_r($result);  //uncomment this line to inspect the result, to check why it failed.
+        //                 header("Location: ".base_url().'paystack/fail/'.$ref);
 
-            }else{
-                //print_r($result);
-                //die("Something went wrong while trying to convert the request variable to json. Uncomment the print_r command to see what is in the result variable.");
-                header("Location: ".base_url().'paystack/fail/'.$ref);
-            }
-        }else{
-            //var_dump($request);
-            //die("Something went wrong while executing curl. Uncomment the var_dump line above this line to see what the issue is. Please check your CURL command to make sure everything is ok");
-            header("Location: ".base_url().'paystack/fail/'.$ref);
-        }
+        //             }
+        //         }
+        //         else{
+
+        //             //echo $result['message'];
+        //             header("Location: ".base_url().'paystack/fail/'.$ref);
+        //         }
+
+        //     }else{
+        //         //print_r($result);
+        //         //die("Something went wrong while trying to convert the request variable to json. Uncomment the print_r command to see what is in the result variable.");
+        //         header("Location: ".base_url().'paystack/fail/'.$ref);
+        //     }
+        // }else{
+        //     //var_dump($request);
+        //     //die("Something went wrong while executing curl. Uncomment the var_dump line above this line to see what the issue is. Please check your CURL command to make sure everything is ok");
+        //     header("Location: ".base_url().'paystack/fail/'.$ref);
+        // }
 
     }
 
@@ -142,6 +146,7 @@ class Paystack extends CI_Model
         $ref = rand(1000000, 9999999999);
         $callback_url = base_url().'admissions/payment_verify/'.$ref;
 
+        $this->session->set_userdata('payment_ref', $ref);
 
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
@@ -178,7 +183,7 @@ if(!$tranx->status){
 }
 
 // comment out this line if you want to redirect the user to the payment page
-print_r($tranx);
+// print_r($tranx);
 
 
 // redirect to page so User can pay

@@ -1,8 +1,14 @@
-<h4><?=$title?></h4>
+
+<!-- <h3> Application No: <?=$title?></h3>
+<h4> Application No: <?=$title?></h4> -->
+
 <?php echo validation_errors();?>
 <?php echo form_open('admissions/studentapplicationform')?>
 <div class="container box_header">
-
+<figure>
+			<a href="<?php echo base_url("pages/view");?>"><img src="<?php echo base_url();?>/assets/img/logo.png" width="149" height="42" data-retina="true" alt=""></a>
+		</figure>
+		<h8> Application No: <?=$title?></h8>
 	<ul class="nav nav-tabs">
 		<li class="nav-items active_tab1" style="border: 1px solid #cccc" id="list_basic_information"><a>Basic
 				Information</a></li>
@@ -29,19 +35,19 @@
 					<br>
 						<div claas="form-group">
 							<label>*Surname</label>
-							<input type="text" class="form-control" name="surname" placeholder="Surname" id="surname">
+							<input type="text" class="form-control" name="surname" placeholder="" id="surname">
 							<span id="error_surname" class="text-danger"></span>
 						</div>
 						<br>
 						<div claas="form-group">
 							<label>*Firstname</label>
-							<input type="text" class="form-control" name="firstname" placeholder="Firstname" id="firstname">
+							<input type="text" class="form-control" name="firstname" placeholder="" id="firstname">
 							<span id="error_firstname" class="text-danger"></span>
 						</div>
 						<br>
 						<div claas="form-group">
 							<label>Othername</label>
-							<input type="text" class="form-control" name="othername" placeholder="Othername" id="othername">
+							<input type="text" class="form-control" name="othername" placeholder="" id="othername">
 							<span id="error_othername" class="text-danger"></span>
 
 						</div>
@@ -66,13 +72,13 @@
 						<br>
 						<div claas="form-group">
 							<label>Religion</label>
-							<input type="text" class="form-control" name="religion" placeholder="Religion" id="religion">
+							<input type="text" class="form-control" name="religion" placeholder="" id="religion">
 							<span id="error_religion" class="text-danger"></span>
 						</div>
 						<br>
 						<div align="center">
 							<!-- <button type="button" class="btn btn-default btn-lg"> Previous</button> -->
-							<button type="button" class="btn btn-info btn-lg" id="btn_basic_information" name="btn_basic_information"> Next </button>
+							<button type="button"  class="btn_1 rounded medium add_top_30" id="btn_basic_information" name="btn_basic_information"> Next </button>
 
 						</div>
 					</div>
@@ -82,25 +88,25 @@
     
     <div class="tab-pane fade" id="personal_information">
 		<div class="panel panel-default">
-			<div class="panel-heading"> Personal Information
+			<div class="panel-heading"> <b>Personal Information</b> 
 				<div class="panel-body">
 				<br>
 					<div class="form-group">
 						<label>Genotype</label>
-						<input type="text" class="form-control" name="genotype" placeholder="Genotype" id="genotype">
+						<input type="text" class="form-control" name="genotype" placeholder="" id="genotype">
 						<span id="error_genotype" class="text-danger"></span>
 
 					</div>
 					<br>
 					<div class="form-group">
 						<label>Blood Group</label>
-						<input type="text" class="form-control" name="bloodgroup" placeholder="Blood Group" id="bloodgroup">
+						<input type="text" class="form-control" name="bloodgroup" placeholder="" id="bloodgroup">
 						<span id="error_blood_group" class="text-danger"></span>
 					</div>
 					<br>
 					<div class="form-group">
 						<label>Physical Health Challenge</label>
-						<input type="text" class="form-control" name="healthissue" placeholder="Physical Health Challenge" id="healthissue">
+						<input type="text" class="form-control" name="healthissue" placeholder="" id="healthissue">
 						<span id="error_health_issue" class="text-danger"></span>
 					</div>
 
@@ -111,14 +117,14 @@
 		<br>
 		<div align="center">
 			<button type="button" class="btn btn-default btn-lg" id="btn_personal_information_prev"> Previous</button>
-			<button type="button" class="btn btn-info btn-lg" id="btn_personal_information_nxt"> Next </button>
+			<button type="button"  class="btn_1 rounded medium add_top_30" id="btn_personal_information_nxt"> Next </button>
 
 		</div>
   </div>
   
   <div class="tab-pane fade " id="pervious_eduction_info">
 		<div class="panel panel-default">
-			<div class="panel-heading"> Details on pervious eduction
+			<div class="panel-heading"><b>Details on pervious eduction</b> 
 				<div class="panel-body">
 				<br>
 					<div class="form-group">
@@ -128,14 +134,19 @@
 					</div>
 					<br>
 					<div class="form-group">
+						<div>
 						<label class="in-line">Start Date</label>
 						<input class="in-line" type="text" class="form-control" name="startdate" placeholder="" id="prystartdatepicker">
 						<span id="pry_sch_start_date_error" class="text-danger"></span>
+						</div>
 						
-
+						<div>
 						<label class="in-line">End Date</label>
 						<input class="in-line" type="text" class="form-control" name="enddate" placeholder=""  id="pryenddatepicker">
 						<span id="pry_sch_end_date_error" class="text-danger"></span>
+						</div>
+
+						
 					</div>
 					<br>
 					<p>(JSS2 & SS1 only)</p>
@@ -145,11 +156,17 @@
 					</div>
 					<br>
 					<div class="form-group">
+						<div class="form-group">
 						<label class="in-line">Start Date</label>
 						<input class="in-line" type="text" class="form-control" name="startdatesecondary" placeholder="" id="secstartdatepicker">
 
+						</div>
+						
+						<div class="form-group">
 						<label class="in-line">End Date</label>
 						<input class="in-line" type="text" class="form-control" name="enddatesecondary" placeholder=""id="secenddatepicker" >
+						</div>
+						
 					</div>
 				</div>
 
@@ -159,7 +176,7 @@
 
 		<div align="center">
 			<button type="button" class="btn btn-default btn-lg" id="btn_eduction_prev"> Previous</button>
-			<button type="button" class="btn btn-info btn-lg" id="btn_eduction_next"> Next </button>
+			<button type="button"  class="btn_1 rounded medium add_top_30" id="btn_eduction_next"> Next </button>
 
 		</div>
 
@@ -169,22 +186,22 @@
 
 	<div class="tab-pane fade" id="church_details">
        <div class="panel panel-default">
-        <div class="panel-heading"> Details about your spiritual and church 
+        <div class="panel-heading"> <b>Details about your spiritual and church</b>  
          <div class="panel-body">
 		 <br>
            <div class="form-group">
             <label >Full name of Church</label>
-             <input type="text" class="form-control" name="church" placeholder="Church Name">
+             <input type="text" class="form-control" name="church" placeholder="">
            </div>
 		   <br>
            <div class="form-group">
             <label >Church Denomination</label>
-             <input type="text" class="form-control" name="churchdenomiation" placeholder="Church Denomination">
+             <input type="text" class="form-control" name="churchdenomiation" placeholder="">
            </div>
 		   <br>
            <div class="form-group">
             <label >Full name of Pastor</label>
-             <input type="text" class="form-control" name="pastorname" placeholder="Physical Health Challenge">
+             <input type="text" class="form-control" name="pastorname" placeholder="">
            </div>
          
          </div>
@@ -195,7 +212,7 @@
 	   <br>
        <div align="center">
          <button type="button" class="btn btn-default btn-lg" id="btn_church_prev"> Previous</button>
-         <button type="button" class="btn btn-info btn-lg" id="btn_church_next"> Next </button>
+         <button type="button"  class="btn_1 rounded medium add_top_30" id="btn_church_next"> Next </button>
        
        </div>
   
@@ -204,7 +221,7 @@
 
      <div class="tab-pane fade" id="parent_information">
        <div class="panel panel-default">
-        <div  class="panel-heading"> Parent/Guardian Information
+        <div  class="panel-heading"><b> Parent/Guardian Information</b>
          <div class="panel-body">
 		  <br>
            <div    class="form-group">
@@ -249,9 +266,9 @@
 
        <div align="center">
          <button type="button" class="btn btn-default btn-lg" id="btn_parent_details_prev"> Previous</button>
-         <button type="button" class="btn btn-info btn-lg" id="btn_parent_details_next"> Next</button>
+         <button type="button"  class="btn_1 rounded medium add_top_30" id="btn_parent_details_next"> Next</button>
 
-         <button type="submit" class="btn btn-info btn-lg" id="btn_submit" value="Submit" name="submit_application"> Submit </button>
+         <button type="submit"  class="btn_1 rounded medium add_top_30" id="btn_submit" value="Submit" name="submit_application"> Submit </button>
        
        </div>
 	   </div>
