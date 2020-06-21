@@ -72,7 +72,6 @@ class Admissions extends CI_Controller{
         $this->load->view('templates/footer');
         } else{
 
-            
             // get login details
 
             // get username
@@ -97,7 +96,7 @@ class Admissions extends CI_Controller{
                 return redirect('admissions/studentapplicationform');
               }else{
                   if($this->addmission_model->check_payment($application_id )){
-                    return redirect('admin/admin_officer');
+                    return redirect('student/student_dashboard');
                   } else{
                     return redirect('admissions/applicationpaymentform');
                   }
@@ -219,10 +218,6 @@ class Admissions extends CI_Controller{
         $this->load->view('templates/footer');
        }
 
-       
-
-
-
-      
+         
     }
 }

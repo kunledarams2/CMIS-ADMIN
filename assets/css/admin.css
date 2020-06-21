@@ -408,6 +408,23 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 /*-------- Cards and footer --------*/
 .card.dashboard {
   border: none;
+
+}
+.card.dashboard.top{
+  background-color: #fff;
+  padding: 15px 30px 0 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+
+  color: #777;
+  font-size: 14px;
+  font-size: 0.875rem;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .card.dashboard h5 {
   color: #fff !important;
@@ -1105,3 +1122,40 @@ select.form-control:not([size]):not([multiple]) {
 .sbOptions .sbSub {
   padding-left: 17px;
 }
+
+.academic_card_content{
+  padding: 20px;
+  
+}
+/* Split the screen in half */
+.split {
+  /* height: 100%;
+  width: 50%; */
+  width: auto;
+  /* height: auto; */
+  /* position: relative; */
+  display: flex;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  height: 50%;
+  width: 100%;
+  /* padding-left: 10px; */
+  margin-right: 10px;
+  /* background-color: #111; */
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  width: 50%;
+  /* height: 100%; */
+  /* background-color: red; */
+}
+

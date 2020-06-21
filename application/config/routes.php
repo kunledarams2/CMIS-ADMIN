@@ -17,5 +17,6 @@ $route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin/admin_officer'] = 'admin/admin_officer';
+$route['student/student_dashboard']= 'student/student_dashboard';
 
  

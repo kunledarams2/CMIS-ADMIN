@@ -41,13 +41,13 @@
 	<link href="<?php echo base_url(); ?>/assets/css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
-	<link href="css/custom.css" rel="stylesheet">
+	<!-- <link href="css/custom.css" rel="stylesheet"> -->
 	
 	<!-- <script src="js/modernizr.js"></script> -->
     <script type='text/javascript'  src="<?php echo base_url(); ?>/assets/js/modernizr.js"></script>
     
 
-    <div class="container">
+    <div >
         <!-- flash messages -->
         <?php if($this->session->flashdata('account_created')) :?>
         <?php echo '<p class="alert alert-success">' .$this->session->flashdata('account_created'). '</p>'; ?>

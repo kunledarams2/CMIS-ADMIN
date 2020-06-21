@@ -15,9 +15,9 @@ form_open('admissions/applicationpaymentform');?>
 </form>
 </div> -->
 
-<div class="container box">
+<div class="wrapper box">
 <h5> <b><?=$title ?></b></h5>
-<div class="wrapper" >
+<div  >
 <p>Thank for making <b>Kingdom Way Academy</b> your first choice. <br>
  For the school addmission board to process your application. You have to make a payment of <b>N4000</b>  </b></b></p>
 </div>
