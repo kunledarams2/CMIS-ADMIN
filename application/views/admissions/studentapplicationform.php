@@ -134,17 +134,23 @@
 					</div>
 					<br>
 					<div class="form-group">
-						<div>
-						<label class="in-line">Start Date</label>
-						<input class="in-line" type="text" class="form-control" name="startdate" placeholder="" id="prystartdatepicker">
+						<div class="row">
+						<div > 
+						<label >Start Date</label>
+						<input type="text" class="form-control" name="startdate" placeholder="" id="prystartdatepicker">
 						<span id="pry_sch_start_date_error" class="text-danger"></span>
 						</div>
 						
+					<br>
+
+						
 						<div>
-						<label class="in-line">End Date</label>
-						<input class="in-line" type="text" class="form-control" name="enddate" placeholder=""  id="pryenddatepicker">
-						<span id="pry_sch_end_date_error" class="text-danger"></span>
+							<label >End Date</label>
+							<input  type="text" class="form-control" name="enddate" placeholder=""  id="pryenddatepicker">
+							<span id="pry_sch_end_date_error" class="text-danger"></span>
 						</div>
+						</div>
+						
 
 						
 					</div>
@@ -156,18 +162,26 @@
 					</div>
 					<br>
 					<div class="form-group">
-						<div class="form-group">
-						<label class="in-line">Start Date</label>
-						<input class="in-line" type="text" class="form-control" name="startdatesecondary" placeholder="" id="secstartdatepicker">
+						<!-- <div class="tab_space"> -->
+							<div class="row">
+								<div class="tab_space">
+									<label >Start Date</label>
+									<input type="text" class="form-control" name="startdatesecondary" placeholder="" id="secstartdatepicker">
 
-						</div>
-						
-						<div class="form-group">
-						<label class="in-line">End Date</label>
-						<input class="in-line" type="text" class="form-control" name="enddatesecondary" placeholder=""id="secenddatepicker" >
-						</div>
-						
+								</div>
+								
+								<div class="tab_space">
+									<label >End Date</label>
+									<input  type="text" class="form-control" name="enddatesecondary" placeholder=""id="secenddatepicker" >
+								</div>
+
+							</div>
+							
+							
+						<!-- </div> -->
+
 					</div>
+					
 				</div>
 
 			</div>

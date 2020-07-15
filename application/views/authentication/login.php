@@ -14,7 +14,7 @@
 	<div id="login">
 		<aside>
 			<figure>
-				<a href=""><img src="<?php echo base_url();?>>/assets/img/logo.png" width="149" height="42" data-retina="true" alt=""></a>
+				<a href=""><img src="/assets/img/logo.png" width="149" height="42" data-retina="true" alt=""></a>
 			</figure>
 			  <form>
 				<!-- <div class="access_social">

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="CMIS ">
     <meta name="" content="">
-    <title>Kingdom Way Academy</title>
+    <title></title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/assets/img/favicon.ico" type="image/x-icon">

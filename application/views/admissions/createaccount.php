@@ -58,28 +58,28 @@
 					<span class="input">
 					<input class="input_field" type="text" name="username">
 						<label class="input_label">
-						<span class="input__label-content">Username</span>
+						<span >Username</span>
 					</label>
 					</span>
 
 					<span class="input">
 					<input class="input_field" type="email" name="email_address">
 						<label class="input_label" >
-						<span class="input__label-content">Your Email</span>
+						<span >Your Email</span>
 					</label>
 					</span>
 
 					<span class="input">
 					<input class="input_field" type="password" name="password">
 						<label class="input_label">
-						<span class="input__label-content">Your password</span>
+						<span >Your password</span>
 					</label>
 					</span>
 
 					<span class="input">
 					<input class="input_field" type="password"name="confirm_password">
 						<label class="input_label">
-						<span class="input__label-content">Confirm password</span>
+						<span >Confirm password</span>
 					</label>
 					</span>
 					

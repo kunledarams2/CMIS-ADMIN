@@ -22,12 +22,20 @@
 </form>
 </div> -->
 
+
+<body id="login_bg">
+	
+	<nav id="menu" class="fake_menu"></nav>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
 <div id="login">
 <?php echo validation_errors()?>
 <?php echo form_open('admissions/login')?>
 		<aside>
 			<figure>
-				<a href=""><img src="<?php echo base_url();?>>/assets/img/logo.png" width="149" height="42" data-retina="true" alt=""></a>
+				<a href=""><img src="/assets/img/logo_black.png" width="149" height="42" data-retina="true" alt=""></a>
 			</figure>
 			  <!-- <form > -->
 				<!-- <div class="access_social">
@@ -40,14 +48,14 @@
 					<span class="input">
 					<input class="input_field" type="text" autocomplete="off" name="username">
 						<label class="input_label">
-						<span class="input__label-content">Username</span>
+						<span class="">Username</span>
 					</label>
 					</span>
 
 					<span class="input">
 					<input class="input_field" type="password" autocomplete="new-password" name="password">
 						<label class="input_label">
-						<span class="input__label-content">Password</span>
+						<span class="">Password</span>
 					</label>
 					</span>
 					<small><a href="#0">Forgot password?</a></small>
@@ -59,3 +67,4 @@
 			<div class="copy">© 2020 CMIS</div>
 		</aside>
 	</div>
+</body>

@@ -3685,7 +3685,7 @@ section#reviews {
 
 /*-------- 2.5 Login/register/admission--------*/
 #login_bg, #register_bg, #admission_bg {
-  background: url(http://via.placeholder.com/1600x1067/ccc/fff/bg_login.jpg) center center no-repeat fixed;
+  background: url(https://firebasestorage.googleapis.com/v0/b/eeeclass17gallery.appspot.com/o/cims%2Flibray_student.jpg?alt=media&token=75a44dd4-6575-4262-b7bd-680e23144a7a) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -3695,7 +3695,7 @@ section#reviews {
 }
 
 #register_bg {
-  background: url(http://via.placeholder.com/1600x1067/ccc/fff/bg_register.jpg) center center no-repeat fixed;
+  background: url(https://firebasestorage.googleapis.com/v0/b/eeeclass17gallery.appspot.com/o/cims%2Flibray_student.jpg?alt=media&token=75a44dd4-6575-4262-b7bd-680e23144a7a) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
